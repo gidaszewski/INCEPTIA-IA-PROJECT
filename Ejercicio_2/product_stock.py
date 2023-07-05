@@ -8,7 +8,8 @@ formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.DEBUG)
 console_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
+if not logger.handlers:
+    logger.addHandler(console_handler)
 
 # Diccionario con las claves y valores dados en el ejercicio 2.1
 data = {"product_name": ["Chocolate", "Granizado", "Limon", "Dulce de Leche"], "quantity": [3,10,0,5]}
