@@ -37,7 +37,7 @@ def is_product_available(product_name: str, quantity: int):
             logger.info(f"No se encontró el producto {product_name}.")
             return False
         
-        # Accede al valor de stock 'quantity' para el producto seleccionado 'product_row'.
+        # Accede al primer valor de stock 'quantity' para el producto seleccionado 'product_row'.
         product_stock = product_row['quantity'].values[0]
 
         # A través de un bucle if se compara la cantidad de stock que hay del producto seleccionado 'product_stock' 
